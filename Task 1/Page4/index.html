@@ -1,0 +1,411 @@
+<html>
+<head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+.cont {
+  position: relative;
+  margin-top: -10px;
+  margin-left: -10px;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  transition: all 200ms linear;
+}
+
+.cont.blur {
+  filter: blur(5px);
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+}
+.modal .content {
+  position: relative;
+  padding: 10px;
+  width: 400px;
+  height: 300px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: rgba(112, 128, 175, 0.2) 0px 16px 24px 0px;
+  transform: scale(0);
+  transition: transform 300ms cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+.modal .close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #7080af;
+  clip-path: polygon(0 10%, 10% 0, 50% 40%, 89% 0, 100% 10%, 60% 50%, 100% 90%, 90% 100%, 50% 60%, 10% 100%, 0 89%, 40% 50%);
+}
+.modal.open {
+  opacity: 1;
+  visibility: visible;
+}
+.modal.open .content {
+  transform: scale(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropbtn {
+  background-color: MidnightBlue;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: DarkSlateBlue;}
+
+
+
+
+
+div.scrollmenu {
+  background-color: Whitesmoke;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: MidnightBlue;
+  text-align: center;
+  padding: 7px;
+vertical-align:middle;
+  text-decoration: none;
+
+ margin: 15px auto auto auto;
+  border-radius: 30px;
+  background: Lavender;
+  width: 200px;
+  height: 40px; 
+}
+
+div.scrollmenu a:hover {
+  background-color: lightgray;
+}
+
+.TL {
+vertical-align:middle;font-size:40px;color: MidnightBlue;}
+
+
+.gclas {display: grid;
+  grid-row-gap: 10px;grid-template-columns: auto auto auto auto auto auto;
+  background-color: white;
+  padding: 10px;
+}
+
+
+
+
+.container_top { 
+  height: 80px;
+  position: relative;
+}
+
+
+
+.container { 
+  height: 50px;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+
+# body{
+ min height : 400px;
+ margin=top: 10%;
+ }
+
+	
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+.grid-item {
+  color: MidnightBlue;
+  text-align: center;
+  font-size: 30px;
+  padding: 7px;
+vertical-align:middle;
+  text-decoration: none;
+
+max-width: 100%;
+max-height: 100%;
+margin: 100 px 100 px;
+  border-radius: 30px;
+  background: Lavender;
+  width: 400px;
+  height: 200px; 
+  padding: 20px;
+}
+
+
+
+
+
+
+.griditem {
+  color: MidnightBlue;
+  text-align: center;
+  font-size: 30px;
+  padding: 7px;
+vertical-align:middle;
+  text-decoration: none;
+
+max-width: 100%;
+max-height: 100%;
+margin: 100 px 100 px;
+  border-radius: 30px;
+  background: Lavender;
+  width: 350px;
+  height: 100px; 
+  padding: 20px;
+}
+
+
+
+.SEARCHBOX {
+  color: MidnightBlue;
+  text-align: center;
+  padding: 7px;
+vertical-align:middle;
+  text-decoration: none;
+  border-radius: 30px;
+  background: Lavender;
+  width: 500px;
+  height: 40px; 
+
+}
+
+
+@media (max-width: 870px) {
+
+.container_top { 
+  height: 130px;
+  position: relative;
+}	
+  .SEARCHBOX {
+
+  width: 25%;
+
+}
+
+.TL {
+vertical-align:middle;font-size:20px;color: MidnightBlue;}
+
+
+  .gclas {
+display: grid;
+  grid-row-gap: 10px;grid-template-columns: auto ;
+  grid-column-gap: 5000px;
+  background-color: white;
+  padding: 50px;
+}
+
+
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body style="background-color:white;" >
+
+<div class = "cont">
+
+<div class="container_top" style = "background-color:WhiteSmoke;">
+	<div class="scrollmenu">
+	  <img src = "" alt = "Logo">
+  	  <a href="#Logo" style = "font-size:20px;">Logo</a>
+	  <a href="#Appointments" style = "font-size:20px;float:right;">Appointments</a>
+	  <a href="#Interested" style = "font-size:20px;float:right;">Interested</a>
+	  <a href="#Categories" style = "font-size:20px;float:right;">Categories</a>
+	</div>
+</div>
+
+
+
+
+<div style = " padding : 30px; margin-right: 4%" >
+
+<input type="button" value="&laquo;" style = "border: none; background: none;vertical-align:middle;font-size:40px;" onclick="history.go(-1)" class="previous">
+<b class = "TL" > Lets Schedule With </b>
+<div style='display:inline-block;float : right; font-size:48px;color:MidnightBlue;'>  Pune</div>
+<i class='fas fa-map-marker-alt' style='float : right; font-size:48px;color:green'></i>
+	  <a href="#about" class="SEARCHBOX" style = "display:block;font-size:20px; width: 200px;">Barber 1</a>
+</div>
+
+
+
+
+
+<div class="gclas">
+  <div class="grid-item"> <b > Description</b>
+	<b style = "font-size:10px;color: MidnightBlue;"><br><br> Description </b> </div>
+	<br><br>
+<div>
+<link href="dist/the-datepicker.css" rel="stylesheet" />
+<script src="dist/the-datepicker.js"></script>
+<input type="text" id="example">
+
+<script>
+const input = document.getElementById('example');
+const datepicker = new TheDatepicker.Datepicker(input);
+datepicker.render();
+
+
+</script>
+</div>
+
+<br><br>
+<div class="dropdown">
+  <button class="dropbtn">Choose time</button>
+  <div class="dropdown-content">
+    <a href="#">2:30 - 3:00</a>
+    <a href="#">3:00 - 3:30</a>
+    <a href="#">3:30 - 4:00</a>
+  </div>
+</div>
+
+
+</div>
+<div>
+<b style = "display : inline-block; font-size:25px;color: MidnightBlue;"><br><br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Schedule With  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</b>
+<div class="dropdown">
+  <button class="dropbtn">Choose Platform</button>
+  <div class="dropdown-content">
+    <a href="#">Google Meet</a>
+    <a href="#">GoTo-Meeting</a>
+    <a href="#">.....</a>
+  </div>
+</div>
+</div>
+
+
+<div>
+<b style = "display : inline-block; font-size:25px;color: MidnightBlue;"><br><br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notes &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</b>
+<div style = "display : inline-block;" class="griditem"> <b > </b>
+	<b style = "font-size:20px;color: MidnightBlue;"> Notes  </b> </div>
+	<br><br>
+<button id="button" style = "float : right; font-size:25px;color: MidnightBlue;margin-right:20%;
+  border-radius: 30px;
+  background: Lavender;border:none;width : 2	00px; height : 100 px;"> Schedule </button>
+
+
+</div>
+
+
+</div>
+<div class="modal">
+  <div class="content">
+    <div class="close"></div>
+    <h1> Yur Appointment is fixed with</h1>
+	<br> Barber 1 <br> 27 - aug - 2020 <br> 2:00 - 2.30 <br>   
+</div>
+</div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
+  
+
+    <script  src="./script.js"></script>
+
+	
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+</body>
+
+
+</html>
+
