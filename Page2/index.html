@@ -30,13 +30,15 @@ div.scrollmenu a:hover {
 }
 
 
-
+.right {
+font-size:20px;float:right;
+}
 
 
 
 
 .container_top { 
-  height: 100px;
+  height: 80px;
   position: relative;
 }
 
@@ -57,13 +59,78 @@ div.scrollmenu a:hover {
 }
 
 
+.gclas {display: grid;
+  grid-row-gap: 50px;grid-template-columns: auto auto auto;
+  background-color: white;
+  padding: 10px;
+}
+
 
 # body{
  min height : 400px;
  margin=top: 10%;
  }
 
-	
+
+.SEARCHBOX {
+  color: MidnightBlue;
+  text-align: center;
+  padding: 7px;
+vertical-align:middle;
+  text-decoration: none;
+  border-radius: 30px;
+  background: Lavender;
+  width: 500px;
+  height: 40px; 
+
+}
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+
+.container_top { 
+  height: 120px;
+  position: relative;
+}	
+  .SEARCHBOX {
+
+  width: 25%;
+
+}
+
+}
+
+
+
+@media (max-width: 600px) {
+  .gclas {
+display: block;
+}
+
+
+
+
+.container_top { 
+  height: 120px;
+  position: relative;
+}	
+
+.right {
+display = block;
+font-size:20px;
+float:left;
+}
+
+
+}
+
+
 
 * {
   box-sizing: border-box;
@@ -105,19 +172,6 @@ margin: 100 px 100 px;
 
 
 
-.SEARCHBOX {
-  color: MidnightBlue;
-  text-align: center;
-  padding: 7px;
-vertical-align:middle;
-  text-decoration: none;
-  border-radius: 30px;
-  background: Lavender;
-  width: 500px;
-  height: 40px; 
-
-
-
 
 /* Clear floats after the columns */
 .row:after {
@@ -135,18 +189,18 @@ vertical-align:middle;
 
 <div class="container_top" style = "background-color:WhiteSmoke;">
 	<div class="scrollmenu">
-	  <img src = "" alt = "Logo">
-  	  <a href="#Logo" style = "font-size:20px;">Logo</a>
-	  <a href="#Appointments" style = "font-size:20px;float:right;">Appointments</a>
-	  <a href="#Interested" style = "font-size:20px;float:right;">Interested</a>
-	  <a href="#Categories" style = "font-size:20px;float:right;">Categories</a>
+	  <img src = "" alt = "Logo" >
+  	  <a href="#Logo" style = "font-size:20px;float = left;">Logo</a>
+	  <a href="#Appointments" class = "right">Appointments</a>
+	  <a href="#Interested" class = "right">Interested</a>
+	  <a href="#Categories" class = "right">Categories</a>
 	</div>
 </div>
 
 
 
 
-<div style = " padding : 30px; margin-right: 4%" >
+<div class = "tcb" style = " padding : 30px; margin-right: 4%" >
 <input type="button" value="&laquo;" style = "border: none; background: none;vertical-align:middle;font-size:40px;" onclick="history.go(-1)" class="previous">
 <input class="SEARCHBOX" type="text" style = "font-size:20px;color:MidnightBlue;" placeholder="Whom are you looking for . . ">
 	  <a href="#about" class="SEARCHBOX" style = "font-size:20px; width: 200px;">Categories</a>
@@ -156,10 +210,8 @@ vertical-align:middle;
 
 
 
-<div style = " display: grid;
-  grid-row-gap: 50px;grid-template-columns: auto auto auto;
-  background-color: white;
-  padding: 10px;">
+
+<div class="gclas">>
   <div class="grid-item"> <img  class="center-fit-grid"src = "1.jfif" > <b style = "display :block;"> Barber 1 </b></div>
   <div class="grid-item"> <img  class="center-fit-grid"src = "2.jfif" > <b style = "display :block;"> Barber 2 </b> </div>
   <div class="grid-item"> <img  class="center-fit-grid"src = "grey.png" >  <b style = "display :block;"> Barber 3 </b> </div>
