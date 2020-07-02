@@ -1,0 +1,263 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+div.scrollmenu {
+  background-color: Whitesmoke;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: MidnightBlue;
+  text-align: center;
+  padding: 7px;
+vertical-align:middle;
+  text-decoration: none;
+
+ margin: 15px auto auto auto;
+  border-radius: 30px;
+  background: Lavender;
+  width: 200px;
+  height: 40px; 
+}
+
+div.scrollmenu a:hover {
+  background-color: lightgray;
+}
+
+
+.right {
+font-size:20px;float:right;
+}
+
+
+.Barber_Button {
+border: none;color: MidnightBlue;  text-align: center; background: none;vertical-align:middle;font-size:20px;
+}
+
+.container_top { 
+  height: 100px;
+  position: relative;
+}
+
+
+
+.container { 
+  height: 50px;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.Pune { display:inline-block;float : right; font-size:48px;color:MidnightBlue;}
+
+.Green {float : right; font-size:48px;color:green}
+
+
+.gclas {display: grid;
+  grid-row-gap: 50px;grid-template-columns: auto auto auto;
+  background-color: white;
+  padding: 10px;
+}
+
+
+# body{
+ min height : 400px;
+ margin=top: 10%;
+ }
+
+
+.LOG {}
+
+.SEARCHBOX {
+  color: MidnightBlue;
+  text-align: center;
+  padding: 7px;
+vertical-align:middle;
+  text-decoration: none;
+  border-radius: 30px;
+  background: Lavender;
+  width: 500px;
+  height: 40px; 
+
+}
+
+
+
+
+
+
+
+
+@media (max-width: 900px) {
+
+.container_top { 
+  height: 150px;
+  position: relative;
+}	
+  .SEARCHBOX {
+
+  width: 25%;
+
+}
+	
+  .gclas {
+display: block;
+}
+
+}
+
+
+
+@media (max-width: 435px) {
+
+.container_top { 
+  height: 270px;
+  position: relative;
+}
+
+  .SEARCHBOX {
+
+  width: 50%;
+
+}
+
+.Pune { display:block;float : right; font-size:24px;color:MidnightBlue; }
+
+
+.right {
+display = block;
+font-size:20px;
+float:left;
+}
+
+
+.Green {float : right; font-size:24px;color:green}
+	 
+}
+
+
+
+
+
+
+@media (max-width: 300px) {
+  .SEARCHBOX {
+
+  width: 75%;
+
+}
+
+}
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+.grid-item {
+  color: MidnightBlue;
+  text-align: center;
+  font-size: 30px;
+
+}
+
+
+
+.center-fit-grid {
+  padding: 7px;
+vertical-align:middle;
+  text-decoration: none;
+  border-radius: 60px;
+  background: Lavender;
+  width: 200px;
+  height: 200px; 
+  padding: 20px;
+max-width: 100%;
+max-height: 100%;
+margin: 100 px 100 px;
+}
+
+
+
+
+
+
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body style="background-color:white;" >
+<script src="index.js"> </script>
+
+<div class="container_top" style = "background-color:WhiteSmoke;">
+	<div class="scrollmenu">
+	  <div class = "LOG"> <img src = "" alt = "Logo" > </div>
+  	  <a href="#Logo" style = "font-size:20px;float = left;">Logo</a>
+	  <a href="#Appointments" class = "right">Appointments</a>
+	  <a href="#Interested" class = "right">Interested</a>
+	  <a href="#Categories" class = "right">Categories</a>
+	</div>
+</div>
+
+
+
+
+<div class = "tcb" style = " padding : 30px; margin-right: 4%" >
+<input type="button" value="&laquo;" style = "border: none; background: none;vertical-align:middle;font-size:40px;" onclick="history.go(-1)" class="previous">
+<input class="SEARCHBOX" type="text" style = "font-size:20px;color:MidnightBlue;" placeholder="Barber 1 ">
+	  <a href="#about" class="SEARCHBOX" style = "font-size:20px; width: 200px;">Categories</a>
+<div class = "Pune" >  Pune</div>
+<div class = "Green">
+<i class='fas fa-map-marker-alt' ></i>
+</div></div>
+
+
+
+
+<div class="gclas">
+  <div class="grid-item"> <img  class="center-fit-grid"src = "1.jfif" > <b style = "display :block;"> <button class = "Barber_Button"> Barber 1 </button></b></div>
+  <div class="grid-item"> <img  class="center-fit-grid"src = "2.jfif" > <b style = "display :block;"> <button class = "Barber_Button"> Barber 2 </button></b> </div>
+  <div class="grid-item"> <img  class="center-fit-grid"src = "grey.png" >  <b style = "display :block;"> <button class = "Barber_Button"> Barber 3 </button> </b> </div>
+  <div class="grid-item"> <img  class="center-fit-grid"src = "grey.png" >  <b style = "display :block;"> <button class = "Barber_Button"> Barber 4 </button></b> </div>
+  <div class="grid-item"> <img  class="center-fit-grid"src = "grey.png" >  <b style = "display :block;"> <button class = "Barber_Button"> Barber 5 </button></b> </div>
+</div>
+
+
+
+
+
+</form>
+</body>
+</html>
+
